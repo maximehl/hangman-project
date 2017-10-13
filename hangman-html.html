@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="hangman-css.css">
+    <script src="hangman-javascript.js"></script>
+</head>
+<body>
+
+<div>
+    <h1 style="margin-bottom: 10px;">Hang a Man</h1>
+    <p style="margin-top: 0; color:#767676;">
+        <span title="Cheat code: The secret word is displayed in developer tools. Shh!">(or not)</span></p>
+</div>
+
+<div>
+    <select id="difficulty" title="What difficulty level would you like?" style="margin-bottom:10px;">
+        <option value="1">Easy</option>
+        <option value="2">Hard</option>
+    </select>
+
+    <button onclick="startGame()" id="start-button">
+        <span title="Let's get hanging!">Start game!</span></button>
+</div>
+
+<div id="image" style="max-width: 335px; text-align: left;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png">
+</div>
+
+<h4 id="guess-title"></h4>
+
+<div id="word"></div>
+
+<div id="guesses-left" style="margin-top: 5px;"></div>
+
+<div style="margin-top:10px;">
+    <select id="letter-select" title="Select the letter you would like to guess." style="display:none;"></select>
+</div>
+
+<div id="guessed-letters" style="margin-top:10px;"></div>
+
+<div style="max-width:120px; margin-top:10px;">
+    <button onclick="guessLetter()" id="guess-button" style="display:none;">Guess the selected letter.</button>
+</div>
+
+</body>
+</html>
